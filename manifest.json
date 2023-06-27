@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+	"name": "Optima extension",
+	"description": "Optima extension",
+	"version": "0.0.1",
+	"author": "felicitas",
+	"browser_action": {
+		"default_title": "Optima extension",
+		"default_icon": "icon.png",
+		"default_popup": "index.html"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://b.optima-osvita.org/*"
+			],
+			"js": ["jquery.min.js", "content.js", "keyframes.dist.js", "colorBg.js"]
+		}
+	],
+	"permissions": ["activeTab"]
+}
